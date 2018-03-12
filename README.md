@@ -4,13 +4,7 @@
 
 Show the native Android material style popup menu on press of an element. This react-native module is a "Native Module" type. However you do not have to link because this is already available inside React Native.
 
-## Demo
-
-A demo of the screen recording shown above is available as a Snack:
-
-[snack.expo.io :: react-native-popup-menu-android Demo](https://snack.expo.io/@noitsnack/react-native-popup-menu-android-demo)
-
-### Table of Contents
+#### Table of Contents
 
 - [Demo](#demo)
 - [Usage](#usage)
@@ -30,17 +24,23 @@ A demo of the screen recording shown above is available as a Snack:
     - [`type PopupAnchor`](#type-popupanchor)
 - [Similar Packages](#similar-packages)
 
-## Usage
+### Demo
 
-### Installation
+A demo of the screen recording shown above is available as a Snack:
+
+[snack.expo.io :: react-native-popup-menu-android Demo](https://snack.expo.io/@noitsnack/react-native-popup-menu-android-demo)
+
+### Usage
+
+#### Installation
 
     npm i react-native-popup-menu-android
 
-### Import
+#### Import
 
     import showPopupMenu from 'react-native-popup-menu-android'
 
-### Render
+#### Render
 
     class More extends Component<||> {
         moreButton: null | Element<typeof View>
@@ -75,29 +75,29 @@ A demo of the screen recording shown above is available as a Snack:
     }
 
 
-## API
+### API
 
-### `showPopupMenu`
+#### `showPopupMenu`
 
 > `static showPopupMenu(items: [PopupMenuItem](#type-popupmenuitem)[], onSelect: [OnPopupMenuItemSelect](#type-onpopupmenuitemselect), anchor: [PopupMenuAchor](#type-popupanchor), options: [PopupMenuOptions](#type-popupmenuoptions)): void`
 
 Show the native popup menu.
 
-## Types
+### Types
 
 [Flow](http://flow.org/) is used as the typing system.
 
-### Exported Types
+#### Exported Types
 
     import type { PopupMenuItem, OnPopupMenuItemSelect, PopupMenuOptions } from 'react-native-popup-android'
 
-#### `type PopupMenuItem`
+##### `type PopupMenuItem`
 
 >     { id?: any, label: string }
 
-#### `type PopupMenuOptions`
+##### `type PopupMenuOptions`
 
-##### Android
+###### Android
 
 >     {
 >         achor: React.Element<
@@ -109,18 +109,18 @@ Show the native popup menu.
 >         onCancel?: () => void,
 >     }
 
-##### iOS
+###### iOS
 
 TODO
 
-#### `type OnPopupMenuItemSelect`
+##### `type OnPopupMenuItemSelect`
 
 >     (selectedPopupMenuItem: [PopupMenuItem](#type-popupmenuitem)) => void
 
 
-### Internal Types
+#### Internal Types
 
-#### `type PopupAnchor`
+##### `type PopupAnchor`
 
 >     type PopupAnchor = Element<
 >       typeof Text |
@@ -129,7 +129,7 @@ TODO
 >       typeof View
 >     >
 
-## Similar Packages
+### Similar Packages
 
 * [**react-native-popover-menu**](https://github.com/prscX/react-native-popover-menu) - Also shows a native popup menu. Includes iOS style popover.
 * [**`<PopupMenuAndroid>`**](https://github.com/facebook/react-native/pull/14581#issue-126176285) - Component provided out of the box in React Native.

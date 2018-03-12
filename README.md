@@ -80,10 +80,10 @@ A demo of the screen recording shown above is available as a Snack:
 #### `showPopupMenu`
 
 >     static showPopupMenu(
->         items: [PopupMenuItem](#type-popupmenuitem)[],
->         onSelect: [OnPopupMenuItemSelect](#type-onpopupmenuitemselect),
->         anchor: [PopupMenuAchor](#type-popupanchor),
->         options: [PopupMenuOptions](#type-popupmenuoptions)
+>         items: PopupMenuItem,
+>         onSelect: OnPopupMenuItemSelect,
+>         anchor: PopupMenuAchor,
+>         options: PopupMenuOptions
 >     ): void
 
 Show the native popup menu relative to element referenced by `anchor`.

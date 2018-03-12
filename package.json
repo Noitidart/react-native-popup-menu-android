@@ -1,6 +1,6 @@
 {
   "name": "react-native-popup-menu-android",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Native Module - Show the native Android material style popup menu on press of an element.",
   "main": "./src/index.android.js",
   "scripts": {

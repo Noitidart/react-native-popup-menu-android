@@ -5,6 +5,12 @@ Show the native Android material style popup menu on press of an element. This r
 
 TODO
 
+## Demo
+
+A demo of the screen recording shown above is available as a Snack:
+
+[snack.expo.io :: react-native-popup-menu-android Demo](https://snack.expo.io/@noitsnack/react-native-popup-menu-android-demo)
+
 ## Usage
 
 ### Installation
@@ -19,26 +25,30 @@ TODO
 ### Render
 
     class More extends Component<||> {
-        more: null | React.Element<typeof View>
+        moreButton: null | Element<typeof View>
 
         render() {
             return (
                 <TouchableNativeFeedback onPress={this.showMore}>
-                    <View ref={this.refMore}>
+                    <View ref={this.refMoreButton}>
                         <Text>Show Menu</Text>
                     </View>
                 </TouchableNativeFeedback>
             )
         }
 
-        refMore = el => this.more = el
+        refMoreButton = el => this.moreButton = el
 
-        showMore() {
-            showPopupMenu(this.handleMoreItemSelect, { anchor:this.more }, [
-                { id:'edit', label:'Quick Edit' },
-                { id:'delete', label:'Trash' },
-                { id:'follow', label:'Follow' }
-            ])
+        showMore = () => {
+            showPopupMenu(
+                [
+                    { id:'edit', label:'Quick Edit' },
+                    { id:'delete', label:'Trash' },
+                    { id:'follow', label:'Follow' }
+                ],
+                this.handleMoreItemSelect,
+                this.moreButton
+            );
         }
 
         handleMoreItemSelect = (item: PopupMenuItem) => {
@@ -51,8 +61,7 @@ TODO
 
 ### `showPopupMenu`
 
-> `static showPopupMenu(items: PopupMenuItem[], onSelect: OnPopupMenuItemSelect, PopupMenuOptions): void`
-
+> `static showPopupMenu(onSelect: OnPopupMenuItemSelect, items: PopupMenuItem[], options: PopupMenuOptions): void`
 
 Show the native popup menu.
 
@@ -69,6 +78,17 @@ Show the native popup menu.
 >     { id?: any, label: string }
 
 ### `type PopupMenuOptions`
+
+## Internal Types
+
+### `type PopupAnchor`
+
+>     type PopupAnchor = Element<
+>       typeof Text |
+>       typeof TouchableNativeFeedback |
+>       typeof TouchableWithoutFeedback |
+>       typeof View
+>     >
 
 #### Android
 

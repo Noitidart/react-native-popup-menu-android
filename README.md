@@ -88,12 +88,12 @@ A demo of the screen recording shown above is available as a Snack:
 
 Show the native popup menu relative to element referenced by `anchor`.
 
-| Parameter        | Type                                                   | Default   | Required | Description                                                                                                                                                                                                                          |
-|------------------|--------------------------------------------------------|-----------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| items            | [`PopupMenuItem`](#type-popupmenuitem)[]               |           | Yes      | Array of strings that are offered as autocomplete suggestions.                                                                                                                                                                       |
-| onSelect         | [`OnPopupMenuItemSelect`](#type-onpopupmenuitemselect) |           | Yes      | A callback that gets                                                                                                                                                                                                                 |
-| anchor           | [`PopupAnchor`](#type-popupanchor)                     |           | Yes      | A ref to the element from which the menu should be positioned on.                                                                                                                                                                    |
-| options.onCancel | `()=>void`                                             | undefined |          | A callback that triggered by user when he dismisses the popup due to (1) hits the hardware back button, or (2) presses outside of the popup menu. This callback is also triggered if an error occurs in trying to display the popup. |
+| Parameter | Type                                                   | Default     | Required | Description                                                       |
+|-----------|--------------------------------------------------------|-------------|----------|-------------------------------------------------------------------|
+| items     | [`PopupMenuItem`](#type-popupmenuitem)[]               |             | Yes      | Array of strings that are offered as autocomplete suggestions.    |
+| onSelect  | [`OnPopupMenuItemSelect`](#type-onpopupmenuitemselect) |             | Yes      | A callback that gets                                              |
+| anchor    | [`PopupAnchor`](#type-popupanchor)                     |             | Yes      | A ref to the element from which the menu should be positioned on. |
+| options   | [`PopupOptions`](#type-popupoptions)                   | `undefined` |          | See [`PopupOptions`](#type-popupoptions).                         |
 
 ### Types
 
@@ -122,6 +122,10 @@ Show the native popup menu relative to element referenced by `anchor`.
 >     {
 >         onCancel?: () => void
 >     }
+
+| Key      | Type         | Default     | Required | Description                                                                                                                                                                                                                          |
+|----------|--------------|-------------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| onCancel | `() => void` | `undefined` |          | A callback that triggered by user when he dismisses the popup due to (1) hits the hardware back button, or (2) presses outside of the popup menu. This callback is also triggered if an error occurs in trying to display the popup. |
 
 ###### iOS
 

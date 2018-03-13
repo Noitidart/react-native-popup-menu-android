@@ -1,4 +1,4 @@
-# react-native-android-menu
+# react-native-popup-menu-android
 
 ![](https://github.com/Noitidart/react-native-popup-menu-android/blob/master/screenshots/demo.gif)
 
